@@ -26,7 +26,7 @@ async def ToJson(user, path):
 
 async def Add_NUMBER(event, api_id, api_hash, phone_number):      
     try:
-        1=1
+        phone_number = phone_number.replace('+','').replace(' ', '')
         
         if not await somy.is_user_authorized():
             request = await somy.send_code_request(phone_number)
